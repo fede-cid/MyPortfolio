@@ -1,0 +1,81 @@
+.mainFooter {
+    position: relative;
+    bottom: -130px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 70px;
+    height: 100%;
+  }
+  
+  .mainFooter a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .mainFooter a:hover {
+    color: var(--secondary-accent);
+  }
+  
+  .mainFooter i {
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .mainFooter i:hover {
+    color:   var(--secondary-accent);
+  }
+  .Titulo {
+    font-family: 'roboto';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 33px;
+    color: var(--accent-color);
+    position: relative;
+    left: 10px;
+  }
+  .MenuItem {
+    z-index: 100;
+    top: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: all 1s ease;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 100%;
+    line-height: 33px;
+    letter-spacing: 1px
+  }
+  
+  .MenuItem * {
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    width: max-content;
+  }
+  
+  .MenuItem a:hover {
+    text-decoration: none;
+    color:   var(--secondary-accent);
+  }
+  @media (max-width: 600px) {
+    .mainFooter {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .mainFooter p, .mainFooter div {
+      width: 100%;
+      text-align: center;
+    }
+  }

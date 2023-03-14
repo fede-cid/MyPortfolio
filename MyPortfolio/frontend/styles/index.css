@@ -1,0 +1,125 @@
+:root {
+  --primary-color: #7e098d;
+  --secondary-color: #FDF7F4;
+  --text-color: #1E1E1E;
+  --white-apoyo: #F6EBEB;
+  --white: #FFFFFF;
+  --accent-color: #5e005e;
+  --secondary-accent: #bc8a00cc;
+  /* --btn-accent: #5C5E4A;
+  --btn: #5C5E4A; */
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,*::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var( --secondary-color);
+  background-color: var(--text-color);
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.buttons {
+  margin: 10%;
+  text-align: center;
+}
+
+
+
+.btnprimario, .btnsecundario, .btnicono {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  justify-content: center;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-image: linear-gradient(to right,  #c49d33cc 0%, #be8f0dcc 40%, #bc8a00cc 100%);
+}
+
+
+.btnprimario {
+  color: var( --secondary-color);
+}
+
+.btnsecundario {
+  color: var( --secondary-color);
+}
+
+.btnicono {
+  color: var( --secondary-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  
+}
+
+.btnicono::after {
+  content: "";
+  width: 20px;
+  height: 17.5px;
+  background: url('/recursos/arrowright.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.btnprimario:hover, .btnsecundario:hover, .btnicono:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.75);
+}
+
+
+.width-100 {
+  width: 100%;
+}
+
+.width-75 {
+  width: 75%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-25 {
+  width: 25%;
+}

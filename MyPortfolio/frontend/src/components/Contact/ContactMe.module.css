@@ -1,0 +1,121 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #1e1e1e;
+  font-family: "Roboto", sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 90px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.input,
+.select,
+.textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  transition: border-color 0.2s ease-in-out;
+  width: -webkit-fill-available;
+  max-height: 200px; 
+  resize: none; 
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--secondary-accent);
+}
+
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 30px;
+}
+
+.button {
+  padding: 16px 36px;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: var(--secondary-accent) ;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--accent-color);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.sent {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  color: #2ecc71;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.message {
+  color: #2ecc71;
+}
+@media screen and (max-width: 768px) {
+  .form {
+    max-width: 80%;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .label {
+    font-size: 1.2rem;
+  }
+
+  .input,
+  .select,
+  .textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+  }
+
+  .sent {
+    font-size: 1.2rem;
+  }
+}
