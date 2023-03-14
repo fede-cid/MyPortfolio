@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --outDir=public",
+    "build": "vite build && echo '/* 200 /index.html' > public/_redirects'",
     "preview": "vite preview"
   },
   "dependencies": {
