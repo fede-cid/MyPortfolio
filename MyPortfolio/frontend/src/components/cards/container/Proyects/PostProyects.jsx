@@ -1,44 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@material-ui/core";
-import { Link } from "react-router-dom";
-
+import {
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Typography,
+  Button,
+} from "@material-ui/core";
 
 const useStyles = makeStyles({
-  card: {
-    display: "flex",
-    flexDirection: "column",
-    height: "100%",
+  root: {
+    background: "transparent",
+    maxWidth: "100%",
   },
   media: {
-    height: 0,
-    paddingTop: "56.25%", 
+    height: 240,
+  },
+  text: {
+    color: "var(--white-apoyo)",
   },
 });
 
-const FeaturedPost = ( post ) => {
+const CardProductos = ({ title, description, image, slug }) => {
   const classes = useStyles();
+  const [showMore, setShowMore] = useState(false);
+
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  };
 
   return (
-    <Card className={classes.card}>
-      <Link to={`/posts/${post.slug}`} className={styles.link}>
+    <Card className={classes.root}>
+      
         <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            title={post.title}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {post.title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {post.description}
+          {/* <CardMedia className={classes.media} image={image} title={title} /> */}
+          <CardContent><a href={`${slug}`} target="_blank">
+            <Typography
+              className={classes.text}
+              gutterBottom
+              variant="h5"
+              component="h2"
+            >
+              {title}
+            </Typography></a>
+            <Typography
+              className={classes.text}
+              variant="body2"
+              color="textSecondary"
+              component="p"
+            >
+              {showMore ? description : `${description.substring(0, 100)}...`}
+              <Button onClick={toggleShowMore}>
+                {showMore ? "Show less" : "Show more"}
+              </Button>
             </Typography>
           </CardContent>
         </CardActionArea>
-      </Link>
+      
     </Card>
   );
 };
 
-export default FeaturedPost;
+export default CardProductos;
