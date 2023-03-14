@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'public', // Modificar aquí
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 1000 * 1000 ,
     rollupOptions: {
       output: {
         manualChunks: {
