@@ -23,7 +23,7 @@ const ContainerCards = () => {
     {
       imageUrl: "../../../../public/recursos/Eventoo.png",
       title: "Eventoo",
-      description:"Nuestra aplicación web es una plataforma que permite a los usuarios crear y comprar eventos, así como dar calificaciones a los mismos. Además, cuenta con un dashboard de administración y fue desarrollada por un equipo de 8 programadores. Utiliza tecnologías como React, Redux Toolkit, JavaScript, CSS3, Node.js, Express.js y PostgreSQL, así como la pasarela de pago de MercadoPago. También cuenta con manejo de local storage y utiliza librerías de Material UI para lograr un diseño atractivo y una buena experiencia de usuario. En resumen, es una aplicación dinámica, fácil de usar y que ofrece una excelente experiencia para todos sus usuarios.",
+      description:"En nuestra aplicación web es una plataforma que permite a los usuarios crear y comprar eventos, así como dar calificaciones a los mismos. Además, cuenta con un dashboard de administración y fue desarrollada por un equipo de 8 programadores. Utiliza tecnologías como React, Redux Toolkit, JavaScript, CSS3, Node.js, Express.js y PostgreSQL, así como la pasarela de pago de MercadoPago. También cuenta con manejo de local storage y utiliza librerías de Material UI para lograr un diseño atractivo y una buena experiencia de usuario. En resumen, es una aplicación dinámica, fácil de usar y que ofrece una excelente experiencia para todos sus usuarios.",
       slug: "https://www.eventoo.com.ar/",
     },
     {
