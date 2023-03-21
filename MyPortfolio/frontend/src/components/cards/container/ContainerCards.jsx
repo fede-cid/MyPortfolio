@@ -1,4 +1,5 @@
 import CardProductos from "../cardproductos/CardProductos";
+import CarrouselMini from "./carrucel/Carrouselmini/CarrouselMini";
 import CardCarousel from "./carrucel/CarrucelMUI";
 import style from "./ContainerCards.module.css";
 import FeaturedPost from "./Proyects/PostProyects";
@@ -45,6 +46,7 @@ const ContainerCards = () => {
           slug={post.slug}
         />
       ))}</div>
+      <CarrouselMini/>
     </>
   );
 };

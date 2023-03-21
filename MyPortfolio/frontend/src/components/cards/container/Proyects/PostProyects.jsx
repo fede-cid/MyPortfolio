@@ -51,8 +51,8 @@ const CardProductos = ({ title, description, image, slug }) => {
               component="p"
             >
               {showMore ? description : `${description.substring(0, 100)}...`}
-              <Button onClick={toggleShowMore}>
-                {showMore ? "Show less" : "Show more"}
+              <Button  onClick={toggleShowMore}>
+                <p>{showMore ? "Show less" : "Show more"}</p>
               </Button>
             </Typography>
           </CardContent>
