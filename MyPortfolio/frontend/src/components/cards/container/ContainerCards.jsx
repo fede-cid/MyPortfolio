@@ -9,13 +9,13 @@ const ContainerCards = () => {
       id: 1,
       title: "Eventoo",
       description: "https://www.eventoo.com.ar/",
-      imageUrl: "../../../../public/recursos/Eventoo.png",
+      imageUrl: "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/Eventoo.png",
     },
     {
       id: 2,
       title: "Pokemons Wiki",
-      description: "https://quiet-monstera-a80bcc.netlify.app/home",
-      imageUrl: "../../../../public/recursos/PokemonWiki.png",
+      description: "https://pokemons-wiki.netlify.app",
+      imageUrl: "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/PokemonWiki.png",
     },
   ];
 
@@ -30,7 +30,7 @@ const ContainerCards = () => {
       imageUrl: "../../../../public/recursos/PokemonWiki.png",
       title: "Pokemons Wiki",
       description: "una aplicación web de Pokémon. He llevado a cabo este proyecto de manera individual, combinando una base de datos PostgreSQL y Node.js en el backend con una interfaz de usuario atractiva y intuitiva en el frontend con React/Redux. La aplicación cuenta con una página de inicio atractiva con tarjetas de Pokémon que enlazan a su información general, así como una página detallada de la tarjeta de cada Pokémon y la opción de crear un Pokémon personalizado. Además, cuenta con filtros y opciones de ordenamiento y una barra de búsqueda para encontrar fácilmente los Pokémon deseados. Estoy orgulloso de mi trabajo y estoy emocionado de compartirlo con ustedes.",
-      slug: "https://quiet-monstera-a80bcc.netlify.app/home",
+      slug: "https://pokemons-wiki.netlify.app",
     },
   ];
   return (
