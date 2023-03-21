@@ -2,7 +2,7 @@ import React from "react";
 import Style from "./Footer.module.css";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaFacebookSquare,FaInstagram, FaTwitter  } from 'react-icons/fa';
+import { FaLinkedin,FaInstagram, FaGithub, FaGoogle  } from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -13,24 +13,16 @@ function Footer() {
       <div>
         <motion.ul className={Style.MenuItem}>
           <li>
-            <NavLink to="/about-us">ABOUT US</NavLink>
-          </li>
-          <li>
             <NavLink to="/contact">CONTACT</NavLink>
-          </li>
-          <li>
-            <NavLink to="/faq">FAQ</NavLink>
-          </li>
-          <li>
-            <NavLink to="/Help">HELP</NavLink>
           </li>
         </motion.ul>
       </div>
       <div >
 
-      <a> <FaFacebookSquare size={20}/> </a>
-      <a> <FaInstagram size={20}/> </a>
-      <a> <FaTwitter size={20}/> </a>
+      <a href="https://www.instagram.com/fefecid/"target='_blank'> <FaInstagram size={20}/> </a>
+      <a href="https://github.com/fede-cid" target='_blank'> <FaGithub size={20}/> </a>
+      <a href="https://www.linkedin.com/in/federico-cid-519421188/" target='_blank'> <FaLinkedin size={20}/> </a>
+      <a href="mailto:fede.cid.96@gmail.com" target='_blank'> <FaGoogle size={20}/> </a>
 
       </div>
     </footer>

@@ -1,11 +1,10 @@
-import { useContext } from 'react';
 
 import StylesEvent from './EventoDestacado.module.css';
 
 import ContenedorImagen from './ContenedorImagen';
 import ContenedorInfo from './ContenedorInfo';
 
-import ProductoContext from '../../context/producto/ProductoContext';
+
 
 const EventoDestacado = () => {
 
@@ -25,6 +24,8 @@ const EventoDestacado = () => {
 
         <div className={StylesEvent.ContenedorDetalles}>
           <ContenedorImagen producto={producto}/>
+        </div>
+        <div className={StylesEvent.ContenedorDetalles}>
           <ContenedorInfo producto={producto}/>
         </div>
       </div>

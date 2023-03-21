@@ -13,7 +13,7 @@ const Navbar = () => {
           <b>F</b>ederico<b>C</b>id
           </span>
         </Link>
-        <div className={Estilo.MenuItem}>
+        <div className={Estilo.MenuItems}>
       
             <button className={Estilo.MenuItem} onClick={()=>navigate("/contact")}>Contact</button>
       

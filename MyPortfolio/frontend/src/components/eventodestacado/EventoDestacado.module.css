@@ -8,9 +8,11 @@
 
 .ContenedorDestacado {
   width: 100%;
+  display: flex;
   max-width: 1234px;
   margin: auto;
   padding: 0 0 10px 20px;
+  justify-content: space-around;
 }
 
 .EncabezadoPrincipal {
@@ -25,7 +27,6 @@
 }
 
 .ContenedorDetalles {
-
   display: flex;
   margin-top: 3%;
 }
@@ -45,13 +46,13 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 380px;
+  width: 380px;
   padding: 7px;
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-  width: max-content;
-  border: 3px solid var(--accent-color) ;
+
+  border: 3px solid var(--accent-color);
   border-radius: 30px;
 }
 
@@ -75,6 +76,10 @@
   .EncabezadoPrincipal {
     max-width: unset;
     margin: 0;
+  }
+  .ContenedorDestacado {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .ContenedorImagen {

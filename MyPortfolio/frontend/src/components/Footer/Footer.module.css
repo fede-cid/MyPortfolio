@@ -1,16 +1,16 @@
 .mainFooter {
-    position: relative;
-    bottom: -130px;
-    width: 100%;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin-top: 70px;
-    height: 100%;
+  position: relative;
+  bottom: -183px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 94px;
+  height: 100%;
   }
   
   .mainFooter a {

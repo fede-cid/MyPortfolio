@@ -1,4 +1,4 @@
-import EventoDestacado from "../components/eventodestacado/EventoDestacado";
+
 import Banner from "../components/banner/Banner";
 
 import Footer from "../components/Footer/Footer";
@@ -8,7 +8,7 @@ const Inicio = () => {
   return (
     <>
       <Banner />
-      <EventoDestacado />
+
 
       <Footer />
 

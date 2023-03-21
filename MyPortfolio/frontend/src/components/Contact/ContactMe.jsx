@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TechSkills from "../TechSkills/TechSkills";
 import styles from "./ContactMe.module.css";
 
 const ContactMe = () => {
@@ -45,13 +46,11 @@ const ContactMe = () => {
 
   return (
     <>
-      {/* Si estás interesado en contratarme para tu próximo proyecto, por favor
-      llena el siguiente formulario para contactarme: Soy un desarrollador Full
-      Stack con una amplia experiencia en tecnologías clave como JavaScript,
-      HTML, CSS, React, Vue.js, Node.js y librerias como Material Ui, Bootstrap,
-      Chakra UI. Tengo un enfoque proactivo y una pasión por el desarrollo web,
-      lo que me lleva a proporcionar soluciones innovadoras y eficientes a los
-      desafíos que me presentan. */}
+    <div className={styles.container}>
+      <h2>ABOUT ME</h2>
+      <br></br>
+      <p className={styles.text}>As a Full Stack Developer with a specialization in Front End, I'm passionate about software development and technology. I love tackling challenging projects that allow me to learn new things and continuously improve my skills. I'm a creative, curious, and self-taught individual who's always seeking new ways to solve problems and find innovative solutions. With solid experience and a passion for my work, I'm ready to bring effective, high-quality solutions to any project I take on.</p>
+      <TechSkills/>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
           <label className={styles.label} htmlFor="name">
@@ -132,12 +131,23 @@ const ContactMe = () => {
           </p>
         )}
       </form>
-      {/* Estoy comprometido con el éxito del equipo y busco una posición en la que
-      pueda aplicar mis habilidades y seguir creciendo profesionalmente. Mis
-      habilidades incluyen JavaScript, React, Redux Toolkit, CSS3, HTML5,
-      Bootstrap, Material UI, Vue, Node, Express, Firebase, Sequelize,
-      PostgreSQL, SQLite, PHP, GitLab, GitHub y Figma. Gracias por tu interés,
-      espero poder trabajar juntos en tu próximo proyecto. */}
+      <h2>Personal Info</h2>
+        <div>
+          <a href="mailto:fede.cid.96@gmail.com">
+            <img
+              className={styles.img}
+              src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"
+              alt="Email"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/federico-cid-519421188/" target='_blank'>
+            <img
+              className={styles.img}
+              src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+              alt="LinkedIn"
+            />
+          </a>
+        </div></div>
     </>
   );
 };
