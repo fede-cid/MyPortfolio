@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Carousel.module.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -6,35 +6,58 @@ const data = [
   {
     title: "To Do List",
     description: "This is the description for card 1",
-    imageUrl: "https://picsum.photos/id/1018/400/250",
-    url:'https://recuerda-no-olvidar-app-de-tareas.vercel.app/'
+    imageUrl:
+      "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/todo.png",
+    url: "https://recuerda-no-olvidar-app-de-tareas.vercel.app/",
   },
   {
     title: "Calculadora",
     description: "This is the description for card 2",
-    imageUrl: "",
-    url:'https://calculadora-react-fedecid.vercel.app/'
+    imageUrl:
+      "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/calculadora.png",
+    url: "https://calculadora-react-fedecid.vercel.app/",
   },
   {
     title: "Speed test clicks",
     description: "This is the description for card 3",
-    imageUrl: "",
-    url:'https://speed-test-clicks.vercel.app/'
+    imageUrl:
+      "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/speed.png",
+    url: "https://speed-test-clicks.vercel.app/",
   },
   {
     title: "Form Vue.js",
     description: "This is the description for card 4",
-    imageUrl: "https://picsum.photos/id/1020/400/250",
-    url:'https://formvueprueba.web.app/'
+    imageUrl:
+      "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/formvue.png",
+    url: "https://formvueprueba.web.app/",
   },
 ];
 
 const CarrouselMini = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [numCards, setNumCards] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 600) {
+        setNumCards(1);
+      } else if (window.innerWidth < 900) {
+        setNumCards(2);
+      } else {
+        setNumCards(3);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleNext = () => {
     setActiveIndex((prevIndex) => {
-      if (prevIndex === data.length - 1) {
+      if (prevIndex === data.length - numCards) {
         return 0;
       } else {
         return prevIndex + 1;
@@ -45,7 +68,7 @@ const CarrouselMini = () => {
   const handlePrev = () => {
     setActiveIndex((prevIndex) => {
       if (prevIndex === 0) {
-        return data.length - 1;
+        return data.length - numCards;
       } else {
         return prevIndex - 1;
       }
@@ -54,36 +77,42 @@ const CarrouselMini = () => {
 
   return (
     <div className={styles.carousel}>
-      <div className={styles.cards}>
-        {data.map((card, index) => (
-          <div
-            key={index}
-            className={`${styles.card} ${
-              index === activeIndex ? styles.active : ""
-            }`}
-            style={{ transform: `translateX(${-20 * (activeIndex - index)}rem)` }}
+      <h2></h2>
+        {activeIndex > 0 && (
+          <button
+            className={`${styles.controls} ${styles.prev}`}
+            onClick={handlePrev}
           >
-            <img src={card.imageUrl} alt={card.title} />
-            <div className={styles.cardDescription}>
-              <h3>{card.title}</h3>
-              <p>{card.description}</p>
-            </div>
-          </div>
-        ))}
+            <FaChevronLeft />
+          </button>
+        )}
+      <div className={styles.cards}>
+        {data.map((item, index) => {
+          if (index >= activeIndex && index < activeIndex + numCards) {
+            return (
+              <div key={index} className={styles.card}>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  <img src={item.imageUrl} alt={item.title} />
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </a>
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
       </div>
-      <div className={styles.controls}>
-        <button onClick={handlePrev}>
-          <FaChevronLeft />
-        </button>
-        <button onClick={handleNext}>
-          <FaChevronRight />
-        </button>
-      </div>
+        {activeIndex < data.length - numCards && (
+          <button
+            className={`${styles.controls} ${styles.next}`}
+            onClick={handleNext}
+          >
+            <FaChevronRight />
+          </button>
+        )}
     </div>
   );
 };
 
-
 export default CarrouselMini;
-
-
