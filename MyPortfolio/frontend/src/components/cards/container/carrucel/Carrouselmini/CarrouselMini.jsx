@@ -5,31 +5,31 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const data = [
   {
     title: "To Do List",
-    description: "This is the description for card 1",
+    description: "Task list in React",
     imageUrl:
       "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/todo.png",
     url: "https://recuerda-no-olvidar-app-de-tareas.vercel.app/",
   },
   {
+    title: "Form Vue.js",
+    description: "Form made in Vue.js, with real-time Firebase database.",
+    imageUrl:
+      "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/formvue.png",
+    url: "https://formvueprueba.web.app/",
+  },
+  {
     title: "Calculadora",
-    description: "This is the description for card 2",
+    description: "Intelligent calculators",
     imageUrl:
       "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/calculadora.png",
     url: "https://calculadora-react-fedecid.vercel.app/",
   },
   {
     title: "Speed test clicks",
-    description: "This is the description for card 3",
+    description: "Click game in React",
     imageUrl:
       "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/speed.png",
     url: "https://speed-test-clicks.vercel.app/",
-  },
-  {
-    title: "Form Vue.js",
-    description: "This is the description for card 4",
-    imageUrl:
-      "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/formvue.png",
-    url: "https://formvueprueba.web.app/",
   },
 ];
 
@@ -75,9 +75,9 @@ const CarrouselMini = () => {
     });
   };
 
-  return (
+  return (<>
+      <h2> These are projects I have worked on.</h2>
     <div className={styles.carousel}>
-      <h2></h2>
         {activeIndex > 0 && (
           <button
             className={`${styles.controls} ${styles.prev}`}
@@ -91,11 +91,11 @@ const CarrouselMini = () => {
           if (index >= activeIndex && index < activeIndex + numCards) {
             return (
               <div key={index} className={styles.card}>
-                <a href={item.url} target="_blank" rel="noopener noreferrer">
                   <img src={item.imageUrl} alt={item.title} />
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
                   <h3>{item.title}</h3>
-                  <p>{item.description}</p>
                 </a>
+                  <p>{item.description}</p>
               </div>
             );
           } else {
@@ -111,7 +111,7 @@ const CarrouselMini = () => {
             <FaChevronRight />
           </button>
         )}
-    </div>
+    </div></>
   );
 };
 

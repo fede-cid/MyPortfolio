@@ -10,13 +10,15 @@ const ContainerCards = () => {
       id: 1,
       title: "Eventoo",
       description: "https://www.eventoo.com.ar/",
-      imageUrl: "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/Eventoo.png",
+      imageUrl:
+        "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/Eventoo.png",
     },
     {
       id: 2,
       title: "Pokemons Wiki",
       description: "https://pokemons-wiki.netlify.app",
-      imageUrl: "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/PokemonWiki.png",
+      imageUrl:
+        "https://raw.githubusercontent.com/fede-cid/MyPortfolio/main/MyPortfolio/frontend/public/recursos/PokemonWiki.png",
     },
   ];
 
@@ -24,29 +26,36 @@ const ContainerCards = () => {
     {
       imageUrl: "../../../../public/recursos/Eventoo.png",
       title: "Eventoo",
-      description:"En nuestra aplicación web es una plataforma que permite a los usuarios crear y comprar eventos, así como dar calificaciones a los mismos. Además, cuenta con un dashboard de administración y fue desarrollada por un equipo de 8 programadores. Utiliza tecnologías como React, Redux Toolkit, JavaScript, CSS3, Node.js, Express.js y PostgreSQL, así como la pasarela de pago de MercadoPago. También cuenta con manejo de local storage y utiliza librerías de Material UI para lograr un diseño atractivo y una buena experiencia de usuario. En resumen, es una aplicación dinámica, fácil de usar y que ofrece una excelente experiencia para todos sus usuarios.",
+      description:
+        "In our web application is a platform that allows users to create and purchase events, as well as rate them. It also features an administration dashboard and was developed by a team of 8 programmers. It uses technologies such as React, Redux Toolkit, JavaScript, CSS3, Node.js, Express.js, and PostgreSQL, as well as the MercadoPago payment gateway. It also features local storage management and uses Material UI libraries to achieve an attractive design and good user experience. In summary, it is a dynamic application, easy to use, and offers an excellent experience for all its users.",
       slug: "https://www.eventoo.com.ar/",
     },
     {
       imageUrl: "../../../../public/recursos/PokemonWiki.png",
       title: "Pokemons Wiki",
-      description: "una aplicación web de Pokémon. He llevado a cabo este proyecto de manera individual, combinando una base de datos PostgreSQL y Node.js en el backend con una interfaz de usuario atractiva y intuitiva en el frontend con React/Redux. La aplicación cuenta con una página de inicio atractiva con tarjetas de Pokémon que enlazan a su información general, así como una página detallada de la tarjeta de cada Pokémon y la opción de crear un Pokémon personalizado. Además, cuenta con filtros y opciones de ordenamiento y una barra de búsqueda para encontrar fácilmente los Pokémon deseados. Estoy orgulloso de mi trabajo y estoy emocionado de compartirlo con ustedes.",
+      description:
+        "A Pokémon web application. I carried out this project individually, combining a PostgreSQL database and Node.js on the backend with an attractive and intuitive user interface on the frontend with React/Redux. The application features an attractive home page with Pokémon cards that link to their general information, as well as a detailed page for each Pokémon card and the option to create a custom Pokémon. It also features filters and sorting options and a search bar to easily find desired Pokémon. I am proud of my work and excited to share it with you.",
       slug: "https://pokemons-wiki.netlify.app",
     },
   ];
   return (
-     <> <CardCarousel cards={cards} />
-    <div className={style.containerCards}>
-      {posts.map((post) => (
-        <FeaturedPost
-          key={post.id}
-          title={post.title}
-          description={post.description}
-          image={post.imageUrl}
-          slug={post.slug}
-        />
-      ))}</div>
-      <CarrouselMini/>
+    <>
+          <h2 className={style.title2}>
+          These are my featured projects.
+      </h2>
+      <CardCarousel cards={cards} />
+      <div className={style.containerCards}>
+        {posts.map((post) => (
+          <FeaturedPost
+            key={post.id}
+            title={post.title}
+            description={post.description}
+            image={post.imageUrl}
+            slug={post.slug}
+          />
+        ))}
+      </div>
+      <CarrouselMini />
     </>
   );
 };

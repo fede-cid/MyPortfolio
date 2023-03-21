@@ -28,6 +28,11 @@
   text-decoration: none;
 }
 
+.title2{
+  margin-top: 90px;
+  text-align: center;
+}
+
 .imgCard {
   width: 21.5rem;
   height: 15rem;
@@ -52,7 +57,4 @@
     margin: 10px;
     justify-items: center;
   }
-}
-.posts{
-  
 }

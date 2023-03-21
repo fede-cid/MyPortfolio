@@ -6,6 +6,7 @@ function Proyects() {
   return (
     <div>
       <Navbar />
+
       <ContainerCards />
       <Footer/>
     </div>
